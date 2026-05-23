@@ -1,8 +1,11 @@
-package Adapter;
-import  java.util.*;
-public class Cart {
+package Modelo;
 
-    private List<Product> productos
+import java.util.ArrayList;
+import java.util.List;
+
+    public class Cart {
+
+        private List<Product> productos
             = new ArrayList<>();
 
     public void agregarProducto(Product producto) {
@@ -11,14 +14,10 @@ public class Cart {
     }
 
     public double calcularTotal() {
-
         double total = 0;
-
-        for(Product producto : productos) {
-
+        for (Product producto : productos) {
             total += producto.getPrecio();
         }
-
         return total;
     }
 }
